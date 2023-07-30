@@ -43,6 +43,13 @@ password :12345678
 
 ### Screenshots
 
+![WishList Image](https://github.com/rimadjamaa/Docker_E-CommercePro/blob/main/public/readme/capt_wishlist.png)
+
+![PayementCard Image](https://github.com/rimadjamaa/Docker_E-CommercePro/blob/main/public/readme/Opera%20Instantané_2023-07-24_183749_localhost.png)
+
+![FrontPage Image](https://github.com/rimadjamaa/Docker_E-CommercePro/blob/main/public/readme/capt_frontpage.png)
+
+
 
 ### License
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
