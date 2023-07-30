@@ -53,9 +53,9 @@ password :12345678
 
 ![Dashboard Image](https://github.com/rimadjamaa/Docker_E-CommercePro/blob/main/public/readme/admindashboard.png)
 
-![OrderList Image](https://github.com/rimadjamaa/Docker_E-CommercePro/blob/main/public/readme/admin_order.png)
+![OrderList Image](https://github.com/rimadjamaa/Docker_E-CommercePro/blob/main/public/readme/admin_orders.png)
 
-![EmailNotification Image](https://github.com/rimadjamaa/Docker_E-CommercePro/blob/main/public/readme/EamilNoticifaction.png)
+![EmailNotification Image](https://github.com/rimadjamaa/Docker_E-CommercePro/blob/main/public/readme/EmailNoticifaction.png)
 
 
 
