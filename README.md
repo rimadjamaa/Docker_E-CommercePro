@@ -14,6 +14,8 @@ Welcome to our E-Commerce Platform, a modern and user-friendly online marketplac
 2. Secure and private shopping environment
 3. Payment includ with card or cash on delevery 
 4. Complete comment & replay system 
+5. Notification system
+6. Verfied Email system
 
 ## Technologies Used
 Laravel (version 9.0.0)
@@ -48,6 +50,12 @@ password :12345678
 ![PayementCard Image](https://github.com/rimadjamaa/Docker_E-CommercePro/blob/main/public/readme/Opera%20Instantané_2023-07-24_183749_localhost.png)
 
 ![FrontPage Image](https://github.com/rimadjamaa/Docker_E-CommercePro/blob/main/public/readme/capt_frontpage.png)
+
+![Dashboard Image](https://github.com/rimadjamaa/Docker_E-CommercePro/blob/main/public/readme/admindashboard.png)
+
+![OrderList Image](https://github.com/rimadjamaa/Docker_E-CommercePro/blob/main/public/readme/admin_order.png)
+
+![EmailNotification Image](https://github.com/rimadjamaa/Docker_E-CommercePro/blob/main/public/readme/EamilNoticifaction.png)
 
 
 
