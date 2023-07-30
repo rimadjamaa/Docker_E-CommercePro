@@ -7,8 +7,20 @@
             @csrf
             <button type="submit">Export to PDF</button>
         </form>
-
-        <!-- Display product list -->
+        <form action="{{route('admin.Orders.Searche')}}" method="POST">
+        @csrf
+        <div class="d-flex justify-content-center">
+        <div class="w-50 text-center">
+            <div class="input-group mb-3">
+            <input type="text" name="searche_text" class="form-control" placeholder="Search...">
+            <div class="input-group-append">
+                <button class="btn btn-primary" name="searche_button" type="submit">Search</button>
+            </div>
+            </div>
+        </div>
+        </form>
+        </div>
+                <!-- Display product list -->
         <table class="table" style="width: calc(100% - 244px); overflow-x: auto;">
             <thead>
                 <tr>
@@ -27,7 +39,7 @@
                 </tr>
             </thead>
             <tbody>
-                @foreach($orders as $order)
+                @forelse($orders as $order)
                 <tr>
                 <td>{{$order->costumer}}</td>
                 <td>{{$order->phone}}</td>
@@ -66,7 +78,9 @@
                             </form>
                         </td>
                 </tr>
-                @endforeach                            
+                @empty
+                <tr><td colspan="12" style="text-align:center;"><h1 style="color:red;">No data Found</h1></td></tr>
+                @endforelse                          
             </tbody>
         </table>
     </div>

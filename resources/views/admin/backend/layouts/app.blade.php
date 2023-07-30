@@ -23,6 +23,7 @@
     <link rel="stylesheet" href="{{ asset('vendor/toastr/toastr.min.css') }}">
     <!-- End layout styles -->
     <link rel="shortcut icon" href="{{asset('backend/images/favicon.png')}}" />
+    @yield('style')
   </head>
   <body>
     <div class="container-scroller">

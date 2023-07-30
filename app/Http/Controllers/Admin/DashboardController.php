@@ -4,6 +4,11 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use  App\Models\Categorie;
+use  App\Models\Product;
+use  App\Models\Order;
+use  App\Models\User;
+
 
 class DashboardController extends Controller
 {
@@ -12,7 +17,19 @@ class DashboardController extends Controller
      */
     public function index()
     {
-        return view('admin.dashboard');
+        $totale_products=Product::all()->count();
+        $totale_orders=Order::all()->count();
+        $totale_categories=Categorie::all()->count();
+        $totale_costumers=User::all()->count();
+        $order=Order::all();
+        $totale_price=0;
+        foreach($order as $order)
+        {
+            $totale_price+=$order->price;
+        }
+        $delivred_products=Order::where('delevery_status','=','Delivred')->get()->count();
+        $processing_products=Order::where('delevery_status','=','procesing')->get()->count();
+        return view('admin.dashboard',compact('totale_products','totale_categories','totale_orders','totale_costumers','totale_price','delivred_products','processing_products'));
     }
 
     /**

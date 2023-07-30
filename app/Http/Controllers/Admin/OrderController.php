@@ -79,6 +79,14 @@ class OrderController extends Controller
             $pdf = PDF::loadView('admin.Orders.pdf', compact('orders'));
             return $pdf->download('orders.pdf');
     }
+
+    public function searche_order(Request $request)
+    {
+            $searche_text = $request->searche_text;
+            $orders=Order::where('costumer','LIKE',"%$searche_text%")->get();
+            return view('admin.Orders.index',compact('orders'));
+    }
+
     /**
      * Remove the specified resource from storage.
      */

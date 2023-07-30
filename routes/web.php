@@ -27,10 +27,12 @@ Route::get('/blog', [FrontpageController::class, 'blogshow'])->name('blog');
 Route::get('/contact', [FrontpageController::class, 'contactshow'])->name('contact');
 Route::post('/add_cart/{id}', [FrontpageController::class, 'add_cart'])->name('add_cart');
 Route::get('/show_cart', [FrontpageController::class, 'show_cart'])->name('show_cart');
-Route::post('/remove-from-cart/{id}', [FrontpageController::class, 'remove_from_cart'])->name('remove-from-cart');
+Route::delete('/remove-from-cart/{id}', [FrontpageController::class, 'remove_from_cart'])->name('remove-from-cart');
 Route::get('/checkout-cash', [FrontpageController::class, 'checkout_cash'])->name('checkout-cash');
 Route::get('/stripe/{totleprice}', [FrontpageController::class, 'stripe'])->name('stripe');
 Route::post('stripe/{totleprice}', [FrontpageController::class,'stripePost'])->name('stripe.post');
+Route::get('/Orders', [FrontpageController::class,'show_orders'])->name('show_orders');
+Route::delete('/Orders/remove/{id}', [FrontpageController::class,'remove_order'])->name('remove_order');
 
 
 
@@ -46,6 +48,7 @@ Route::group(['prefix' => 'admin','namespace'=>'Admin', 'middleware' => ['auth',
     Route::post('Orders/exportPdf', [OrderController::class, 'exportPdf'])->name('Orders.export-pdf');
     Route::get('Orders/sendEamil/{id}', [OrderController::class, 'sendemail'])->name('sendEmail');
     Route::post('Orders/send_user_email/{id}', [OrderController::class, 'send_user_email'])->name('send_user_email');
+    Route::post('Orders/Searche_Order', [OrderController::class, 'searche_order'])->name('Orders.Searche');
 
 });
 

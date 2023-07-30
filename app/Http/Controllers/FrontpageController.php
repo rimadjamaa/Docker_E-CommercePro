@@ -172,17 +172,25 @@ class FrontpageController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(string $id)
+    public function show_orders()
     {
-        //
+        if(Auth::user()){
+            $user_id=Auth::user()->id;
+            $orders=Order::where('user_id','=',$user_id)->get();
+            return view('pages.orders',compact('orders'));
+        }else{
+            return redirect()->route('login');
+        }
     }
 
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(string $id)
+    public function remove_order(string $id)
     {
-        //
+        $order=Order::findOrFail($id);
+        $order->delete();
+        return redirect()->back();
     }
 
     /**
