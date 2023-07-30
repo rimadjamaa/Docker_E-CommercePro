@@ -1168,3 +1168,117 @@ form input[type="submit"]:focus {
 .close::before {
   content: "\00d7";
 }
+
+/* comment */
+
+
+
+.comment-section {
+  width: 80%;
+  max-width: 600px;
+  margin: 20px auto;
+}
+
+h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.comment {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  padding: 10px;
+}
+
+.comment-header {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.comment-content {
+  margin-bottom: 10px;
+}
+
+.comment-footer {
+  justify-content: space-between;
+  align-items: center;
+}
+
+.btn-reply {
+  color: #f7444e;
+  cursor: pointer;
+  display: block;
+}
+
+.reply-form {
+  margin-top: 10px;
+  display:none ;
+}
+
+.reply-form textarea {
+  width: 100%;
+  height: 80px;
+  resize: vertical;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.reply-form button {
+  margin-top: 5px;
+  background-color: #f7444e;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 8px 15px;
+  cursor: pointer;
+}
+
+.reply {
+  border: 1px solid #f0f0f0;
+  border-radius: 5px;
+  margin-top: 10px;
+  padding: 5px;
+}
+
+.reply-header {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.comment-form {
+  margin-top: 20px;
+  border-top: 1px solid #ccc;
+  padding-top: 10px;
+}
+
+.comment-form h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.comment-form textarea {
+  width: 100%;
+  resize: vertical;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.comment-form button {
+  margin-top: 5px;
+  background-color: #f7444e;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 8px 15px;
+  cursor: pointer;
+}
+
+/* Media query for responsiveness */
+@media only screen and (max-width: 600px) {
+  .comment-section {
+    width: 90%;
+  }
+}

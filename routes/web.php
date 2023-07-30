@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\FrontpageController;
+use App\Http\Controllers\CommentController;
 use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\OrderController;
 use Illuminate\Support\Facades\Route;
@@ -33,6 +34,8 @@ Route::get('/stripe/{totleprice}', [FrontpageController::class, 'stripe'])->name
 Route::post('stripe/{totleprice}', [FrontpageController::class,'stripePost'])->name('stripe.post');
 Route::get('/Orders', [FrontpageController::class,'show_orders'])->name('show_orders');
 Route::delete('/Orders/remove/{id}', [FrontpageController::class,'remove_order'])->name('remove_order');
+Route::post('/Comment', [CommentController::class,'add_comment'])->name('add_comment');
+Route::post('/Replay/{id}', [CommentController::class,'add_replay'])->name('add_replay');
 
 
 

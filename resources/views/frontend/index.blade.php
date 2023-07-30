@@ -419,6 +419,58 @@
    </div>
 </section>
 <!-- end product section -->
+<!-- start comment section  -->
+
+<div class="comment-section">
+         <div class="comment-form">
+            <h3>Leave a Comment</h3>
+            <form action="{{route('add_comment')}}" method="post">
+               @csrf
+                <textarea name="commentContent" rows="5" placeholder="Your comment..."></textarea>
+                <button type="submit">Comment</button>
+            </form>
+        </div>
+        <h2>All Comments</h2>
+        @foreach($comments as $comment)
+        <div class="comment">
+            <div class="comment-header">{{$comment->name}}</div>
+            <div class="comment-content">{{$comment->comment}}</div>
+            <div class="comment-footer">
+                <span class="btn-reply" onclick="toggleReplyForm(this)">Reply</span>
+                <div class="reply-form" id="reply-form">
+                    <form action="{{route('add_replay',$comment->id)}}" method="post">
+                     @csrf
+                        <textarea name="replyContent" placeholder="Your reply..."></textarea>
+                        <button type="submit">Reply</button>
+                    </form>
+                </div>
+                @foreach($replays as $replay)
+                  @if($replay->comment_id == $comment->id)
+                  <div class="replies">
+                     <div class="reply">
+                           <div class="reply-header">{{$replay->name}}</div>
+                           <div class="reply-content">{{$replay->replay}}</div>
+                     </div>
+                  </div>
+                  @endif
+                @endforeach
+            </div>
+        </div>
+        @endforeach
+    </div>
+    <script>
+      function toggleReplyForm(btnReply) {
+         const commentDiv = btnReply.closest('.comment');
+         const replyForm = commentDiv.querySelector('.reply-form');
+         
+         if (replyForm) {
+            replyForm.style.display = replyForm.style.display === 'none' ? 'block' : 'none';
+         }
+      }
+      </script>
+
+
+<!-- end comment section -->
 
 <!-- subscribe section -->
 <section class="subscribe_section">

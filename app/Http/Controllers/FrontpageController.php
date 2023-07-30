@@ -10,6 +10,8 @@ use  App\Models\Product;
 use  App\Models\User;
 use  App\Models\Cart;
 use  App\Models\Order;
+use  App\Models\comment;
+use  App\Models\Replay;
 use Illuminate\Support\Facades\Auth;
 
 
@@ -21,7 +23,9 @@ class FrontpageController extends Controller
     public function index()
     {
         $products = Product::paginate(3);
-        return view('frontend.index',compact('products'));
+        $comments = comment::all();
+        $replays = Replay::all();
+        return view('frontend.index',compact('products','comments','replays'));
     }
 
     public function aboutshow()
