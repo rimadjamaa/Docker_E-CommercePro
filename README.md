@@ -1,4 +1,4 @@
-### E-CommercePro
+# E-CommercePro
 Welcome to our E-Commerce Platform, a modern and user-friendly online marketplace. Our platform offers a wide range of high-quality products from various categories, providing customers with a seamless shopping experience.
 
 ## Pages
@@ -20,7 +20,7 @@ Laravel (version 9.0.0)
 Bootstrap (version 5.5.0)
 MySQL (version 8.0.0)
 
-### Installation
+## Installation
 Provide step-by-step instructions on how to install the project locally.
 
 Clone the repository:` git clone <repository-url>`
@@ -31,17 +31,17 @@ Set up the database and configure the database connection in the .env file.
 Run database migrations: `php artisan migrate`
 Start the development server: `php artisan serve`
 
-### Usage
-1. # Admin acount :
+## Usage
+1. ### Admin acount :
 email : admin@admin.com
 password :12345678
 
-2. # User acount(for test):
+2. ### User acount(for test):
 
 email : user@user.com
 password :12345678
 
-### Screenshots
+## Screenshots
 
 ![WishList Image](https://github.com/rimadjamaa/Docker_E-CommercePro/blob/main/public/readme/capt_wishlist.png)
 
@@ -51,6 +51,6 @@ password :12345678
 
 
 
-### License
+## License
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
